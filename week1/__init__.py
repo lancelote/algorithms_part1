@@ -1,1 +1,3 @@
-__author__ = 'Paul'
+"""
+Week 1
+"""

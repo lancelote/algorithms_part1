@@ -9,4 +9,5 @@ Code for the coursera Algorithms Part I course
 ## ToDo List
 
 - [ ] Tests
-- [ ] Project infrastructure
+- [ ] CI
+- [x] Project infrastructure
