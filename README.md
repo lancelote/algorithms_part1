@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/lancelote/algorithms_part1.svg)](https://travis-ci.org/lancelote/algorithms_part1)
 [![Requirements Status](https://requires.io/github/lancelote/algorithms_part1/requirements.svg?branch=master)](https://requires.io/github/lancelote/algorithms_part1/requirements/?branch=master)
 
 # Algorithms, Part 1
