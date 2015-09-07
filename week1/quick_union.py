@@ -16,7 +16,7 @@ class QuickUnion:
         :param n: number of objects (0 to n - 1)
         """
         self.data = list(range(n))
-        self.size = [0]*n  # Objects height in the tree
+        self.size = [1]*n  # Objects height in the tree
 
     def union(self, obj1, obj2):
         """
