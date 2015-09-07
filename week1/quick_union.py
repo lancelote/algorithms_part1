@@ -2,8 +2,6 @@
 Quick Union algorithm (weighted)
 """
 
-import argparse
-
 
 class QuickUnion:
     """
@@ -63,32 +61,3 @@ class QuickUnion:
         return ' '.join(map(str, self.data))
 
     __str__ = __repr__
-
-
-def arg_parse():  # pragma: no cover
-    """
-    Parse console arguments
-    """
-    parser = argparse.ArgumentParser(description="Quick union algorithm")
-    parser.add_argument("task", action="store")
-    args = parser.parse_args()
-    task = args.task
-    return task
-
-
-def main():  # pragma: no cover
-    """
-    Prints the result to a console
-    """
-    task = arg_parse().split(' ')
-    length, unions = task[0], task[1:]
-
-    # Run algorithm
-    lst = QuickUnion(int(length))
-    for union_operation in unions:
-        obj1, obj2 = map(int, union_operation.split('-'))
-        lst.union(obj1, obj2)
-    print(lst)
-
-if __name__ == '__main__':  # pragma: no cover
-    main()
