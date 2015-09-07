@@ -11,11 +11,11 @@ class QuickFind:
     items with the same value represent the connected objects
     """
 
-    def __init__(self, n):
+    def __init__(self, length):
         """
-        :param n: number of objects (0 to n - 1)
+        :param length: number of objects (0 to n - 1)
         """
-        self.data = list(range(n))
+        self.data = list(range(length))
 
     def union(self, obj1, obj2):
         """
@@ -79,10 +79,10 @@ def main():  # pragma: no cover
     Prints the result to a console
     """
     task = arg_parse().split(' ')
-    n, unions = task[0], task[1:]
+    legth, unions = task[0], task[1:]
 
     # Run algorithm
-    lst = QuickFind(int(n))
+    lst = QuickFind(int(legth))
     for union_operation in unions:
         obj1, obj2 = map(int, union_operation.split('-'))
         lst.union(obj1, obj2)

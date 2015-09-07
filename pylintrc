@@ -1,6 +1,6 @@
 [MESSAGES CONTROL]
 # Ignore warnings about locally disables errors
-disable=bad-builtin
+disable=bad-builtin, locally-disabled
 
 [REPORTS]
 # Simplify pylint reports

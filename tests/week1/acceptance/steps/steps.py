@@ -1,3 +1,5 @@
+# pylint: disable=no-name-in-module, function-redefined
+
 """
 Acceptance tests
 """
