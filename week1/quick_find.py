@@ -79,10 +79,10 @@ def main():  # pragma: no cover
     Prints the result to a console
     """
     task = arg_parse().split(' ')
-    legth, unions = task[0], task[1:]
+    length, unions = task[0], task[1:]
 
     # Run algorithm
-    lst = QuickFind(int(legth))
+    lst = QuickFind(int(length))
     for union_operation in unions:
         obj1, obj2 = map(int, union_operation.split('-'))
         lst.union(obj1, obj2)
