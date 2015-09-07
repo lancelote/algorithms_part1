@@ -40,7 +40,7 @@ paver week1  # Concrete (week1, week2, ..., weekn)
 
 ## ToDo List
 
-- [ ] Tests
+- [x] Tests
 - [x] CI
 - [x] Extend description
 - [x] Refactor algorithm call API
