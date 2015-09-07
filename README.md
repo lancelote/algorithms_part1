@@ -8,6 +8,7 @@ Code for the coursera Algorithms Part I course
 
 ## ToDo List
 
+- [ ] Refactor algorithm call API
 - [ ] Tests
 - [ ] CI
 - [x] Project infrastructure
