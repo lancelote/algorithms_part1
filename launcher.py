@@ -29,8 +29,12 @@ def main():  # pragma: no cover
     # Run algorithm
     if algorithm == 'quick_find':
         lst = QuickFind(int(length))
-    else:
+    elif algorithm == 'quick_union':
         lst = QuickUnion(int(length))
+    else:
+        raise ValueError(
+            "Unknown algorithm %s, try quick_find or quick_union" % algorithm
+        )
     for union_operation in unions:
         obj1, obj2 = map(int, union_operation.split('-'))
         lst.union(obj1, obj2)
