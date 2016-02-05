@@ -1,29 +1,31 @@
-"""
-Quick Union algorithm (weighted)
-"""
+"""Quick Union algorithm (weighted)"""
 
 
 class QuickUnion:
-    """
-    Object sequence represented as a list of items,
-    item value corresponds to a root of object
+    """Object sequence represented as a list of items
+
+    Item value corresponds to a root of object
     """
 
     def __init__(self, n):
         """
-        :param n: number of objects (0 to n - 1)
+        Args:
+            n (int): Number of objects
         """
         self.data = list(range(n))
         self.size = [1]*n  # Objects height in the tree
 
     def union(self, obj1, obj2):
-        """
-        Add connection between obj1 and obj2 objects
-        Weight algorithm (avoiding too height trees)
+        """Add connection between obj1 and obj2 objects
 
-        :param obj1: int
-        :param obj2: int
-        :return: None
+        Weighted algorithm (avoiding too height trees)
+
+        Args:
+            obj1 (int): First object
+            obj2 (int): Second object
+
+        Returns:
+            None
         """
         root_obj1 = self.root(obj1)
         root_obj2 = self.root(obj2)
@@ -36,20 +38,25 @@ class QuickUnion:
                 self.size[root_obj1] += self.size[root_obj2]
 
     def connected(self, obj1, obj2):
-        """
-        Are obj1 and obj2 in the same component?
-        :param obj1: int
-        :param obj2: int
-        :return: True or False
+        """Are obj1 and obj2 in the same component?
+
+        Args:
+            obj1 (int): First object
+            obj2 (int): Second object
+
+        Returns:
+            bool: True or False
         """
         return self.root(obj1) == self.root(obj2)
 
     def root(self, obj):
-        """
-        Root of obj
+        """Find root of obj
 
-        :param obj: int
-        :return: int
+        Args:
+            obj (int): Object to find root
+
+        Returns:
+            int: Object root
         """
         while obj != self.data[obj]:
             # Uncomment to enable simple path compression
