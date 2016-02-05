@@ -25,14 +25,22 @@ python3 launcher.py "quick_union 10 1-2 3-4 5-6 7-8"
 #   1-2 ... - union operations
 ```
 
-## Test
+## Requirements
 
-First:
+Install:
 ```bash
 pip install -r requirements.txt
 ```
 
-Second:
+Update/change:
+1. Fix `requirements.in`
+2. Make sure `pip-tools` are installed
+3. Run `pip-compile requirements.in`
+4. New `requirements.txt` are ready, run `pip-sync` to update your virtual
+environment (do not do this without active venv!)
+
+## Tests
+
 ```bash
 paver        # Everything
 paver week1  # Concrete (week1, week2, ..., weekn)
