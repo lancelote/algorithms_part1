@@ -33,6 +33,7 @@ pip install -r requirements.txt
 ```
 
 Update/change:
+
 1. Fix `requirements.in`
 2. Make sure `pip-tools` are installed
 3. Run `pip-compile requirements.in`
